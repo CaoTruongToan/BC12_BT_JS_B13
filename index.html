@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập JS Buổi 13</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+        }
+
+        .tab-pane {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .nav-pills {
+            justify-content: center;
+        }
+
+        .nav-link {
+            margin: 5px;
+        }
+
+        form input {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="d-flex align-items-start flex-column">
+            <div class="nav nav-pills mb-3 justify-content-center" id="v-pills-tab" role="tablist">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#bai-01"
+                    type="button" role="tab">Bài 1</button>
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#bai-02"
+                    type="button" role="tab">Bài 2</button>
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#bai-03"
+                    type="button" role="tab">Bài 3</button>
+                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#bai-04"
+                    type="button" role="tab">Bài 4</button>
+                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#bai-05"
+                    type="button" role="tab">Bài 5</button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="bai-01" role="tabpanel">
+                    <h1 class="title">Tính tiền lương nhân viên</h1>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Lương 1 ngày" id="payOneDay">
+                        <input type="text" class="form-control" placeholder="Số ngày làm" id="day">
+                        <button style="margin-top: 15px;" type="button" onclick="luongNV()" class="btn btn-success">Tính</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="bai-02" role="tabpanel">
+                    <h1 class="title">Tính giá trị trung bình</h1>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Nhập số thực" id="number01">
+                        <input type="text" class="form-control" placeholder="Nhập số thực" id="number02">
+                        <input type="text" class="form-control" placeholder="Nhập số thực" id="number03">
+                        <input type="text" class="form-control" placeholder="Nhập số thực" id="number04">
+                        <input type="text" class="form-control" placeholder="Nhập số thực" id="number05">
+                        <button style="margin-top: 15px;" type="button" class="btn btn-success" onclick="calcAverageNumber()">Tính</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="bai-03" role="tabpanel">
+                    <h1 class="title">Quy đổi tiền</h1>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Giá USD" id="priceUSD">
+                        <input type="text" class="form-control" placeholder="Nhập vào số tiền USD" id="usd">
+                        <button style="margin-top: 15px;" type="button" class="btn btn-success" onclick="usdAndVnd()">Quy đổi</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="bai-04" role="tabpanel">
+                    <h1 class="title">Tính diện tích, chu vi hình chữ nhật</h1>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Chiều dài" id="lengthRec">
+                        <input type="text" class="form-control" placeholder="Chiều rộng" id="widthRec">
+                        <button style="margin-top: 15px;" type="button" class="btn btn-success" onclick="calcRec()">Tính</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="bai-05" role="tabpanel">
+                    <h1 class="title">Tính tổng 2 ký số</h1>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Nhập số có 2 chữ số" id="number">
+                        <button style="margin-top: 15px;" type="button" class="btn btn-success" onclick="calcNumber()">Tính</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
